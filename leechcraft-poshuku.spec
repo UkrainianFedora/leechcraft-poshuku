@@ -48,10 +48,10 @@ pushd %{_target_platform}
     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DLEECHCRAFT_VERSION="%{version}" \
     $(cat ../src/CMakeLists.txt | egrep "^(cmake_dependent_)?option \(ENABLE" | awk '{print $2}' | sed 's/^(/-D/;s/$/=False/;s/\(POSHUKU[^=]*=\)False/\1True/' | xargs) \
-    $(cat ../src/plugins/azoth/CMakeLists.txt | egrep "^option \(ENABLE" | awk '{print $2}' | sed 's/^(/-D/;s/$/=True/' | xargs) \
+    $(cat ../src/plugins/poshuku/CMakeLists.txt | egrep "^option \(ENABLE" | awk '{print $2}' | sed 's/^(/-D/;s/$/=True/' | xargs) \
     ../src
 
-cd plugins/azoth
+cd plugins/poshuku
 make %{?_smp_mflags} 
 popd
 
