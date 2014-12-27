@@ -77,6 +77,16 @@ make install/fast DESTDIR=$RPM_BUILD_ROOT
 popd
 
 declare -a arr=("leechcraft_poshuku"\
+                "leechcraft_poshuku_autosearch"\
+                "leechcraft_poshuku_cleanweb"\
+                "leechcraft_poshuku_dcac"\
+                "leechcraft_poshuku_fatape"\
+                "leechcraft_poshuku_filescheme"\
+                "leechcraft_poshuku_fua"\
+                "leechcraft_poshuku_keywords"\
+                "leechcraft_poshuku_onlinebookmarks"\
+                "leechcraft_poshuku_qrd"\
+                "leechcraft_poshuku_speeddial"\
                 )
 
 for i in "${arr[@]}"
@@ -91,6 +101,8 @@ cat *.lang > poshuku.lang
 %postun -p /sbin/ldconfig
 
 %files -f poshuku.lang
+%{_datadir}/%{product_name}/installed/poshuku/LeechCraft.Poshuku
+
 %{plugin_dir}/libleechcraft_poshuku*.so 
 %{settings_dir}/*.xml
 
