@@ -22,6 +22,7 @@ BuildRequires: qwt-devel
 BuildRequires: pcre-devel
 BuildRequires: leechcraft-devel >= %{version}
 BuildRequires: qjson-devel
+BuildRequires: qrencode-devel
 
 
 %description
