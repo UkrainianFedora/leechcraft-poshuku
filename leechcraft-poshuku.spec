@@ -21,6 +21,7 @@ BuildRequires: bzip2-devel
 BuildRequires: qwt-devel
 BuildRequires: pcre-devel
 BuildRequires: leechcraft-devel >= %{version}
+BuildRequires: qjson-devel
 
 
 %description
