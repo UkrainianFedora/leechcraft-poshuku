@@ -23,7 +23,7 @@ BuildRequires: pcre-devel
 BuildRequires: leechcraft-devel >= %{version}
 BuildRequires: qjson-devel
 BuildRequires: qrencode-devel
-BuildRequires: libidn2-devel
+BuildRequires: libidn-devel
 
 
 %description
