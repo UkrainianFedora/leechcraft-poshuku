@@ -5,7 +5,7 @@
 %define full_version %{version}-%{release}
 
 Name:           leechcraft-poshuku
-Summary:        IM Client for LeechCraft
+Summary:        LeechCraft Web Browser Module
 Version:        0.6.70
 Release:        2%{?dist}
 License:        GPLv2+
@@ -23,19 +23,32 @@ BuildRequires: pcre-devel
 BuildRequires: leechcraft-devel >= %{version}
 BuildRequires: qjson-devel
 BuildRequires: qrencode-devel
+BuildRequires: libidn2-devel
 
 
 %description
-This package contains an IM client for LeechCraft.
+This package provides a web browser plugin for LeechCraft.
+
+It is an full-featured web browser based on WebKit.
+Poshuku is fully extensible with plugins.
+
+Currently it features:
+* support for all major web-standards;
+* integration with other plugins;
+* autodiscovery;
+* tagging bookmarks;
+* support for SQLite or PostgreSQL storage.
+
+
 
 
 %package devel
-Summary:    Leechcraft Azoth Development Files
+Summary:    Leechcraft Poshuku Development Files
 Requires:   %{name}%{?_isa} = %{full_version}
 
 %description devel
 This package contains header files required to develop new modules for
-LeechCraft Azoth.
+LeechCraft Poshuku.
 
 
 %prep
