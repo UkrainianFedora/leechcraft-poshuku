@@ -85,6 +85,8 @@ declare -a arr=("leechcraft_poshuku"\
                 "leechcraft_poshuku_fua"\
                 "leechcraft_poshuku_keywords"\
                 "leechcraft_poshuku_onlinebookmarks"\
+                "leechcraft_poshuku_onlinebookmarks_delicious"\
+                "leechcraft_poshuku_onlinebookmarks_readitlater"\
                 "leechcraft_poshuku_qrd"\
                 "leechcraft_poshuku_speeddial"\
                 )
