@@ -14,6 +14,7 @@ License:        GPLv2+
 Url:            http://leechcraft.org
 Source0:        http://dist.leechcraft.org/LeechCraft/%{version}/leechcraft-0.6.70-%{git_version}.tar.xz
 Patch1: 001-fix-qwt-cmake-script.patch
+Patch5: 005-fixing-poshuku-plugin-deps.patch
 
 BuildRequires: cmake
 BuildRequires: boost-devel
@@ -29,8 +30,8 @@ BuildRequires: leechcraft-devel >= %{version}
 BuildRequires: qjson-devel
 BuildRequires: qrencode-devel
 BuildRequires: libidn-devel
-BuildRequires:  qwt-qt5-devel
-BuildRequires:  clang
+BuildRequires: qwt-qt5-devel
+BuildRequires: clang
 
 
 %description
@@ -61,6 +62,7 @@ LeechCraft Poshuku.
 %prep
 %setup -qn %{product_name}-0.6.70-%{git_version}
 %patch1 -p 0
+%patch5 -p 0
 
 %build
 mkdir -p %{_target_platform}

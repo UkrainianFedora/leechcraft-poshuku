@@ -1,0 +1,90 @@
+diff --git src/plugins/poshuku/plugins/autosearch/CMakeLists.txt src/plugins/poshuku/plugins/autosearch/CMakeLists.txt
+index df5d55f..052266d 100644
+--- src/plugins/poshuku/plugins/autosearch/CMakeLists.txt
++++ src/plugins/poshuku/plugins/autosearch/CMakeLists.txt
+@@ -20,4 +20,4 @@ target_link_libraries (leechcraft_poshuku_autosearch
+ 	)
+ install (TARGETS leechcraft_poshuku_autosearch DESTINATION ${LC_PLUGINS_DEST})
+ 
+-FindQtLibs (leechcraft_poshuku_autosearch Core)
++FindQtLibs (leechcraft_poshuku_autosearch Core Network Xml Widgets)
+diff --git src/plugins/poshuku/plugins/cleanweb/CMakeLists.txt src/plugins/poshuku/plugins/cleanweb/CMakeLists.txt
+index 01d0944..f85e33e 100644
+--- src/plugins/poshuku/plugins/cleanweb/CMakeLists.txt
++++ src/plugins/poshuku/plugins/cleanweb/CMakeLists.txt
+@@ -46,4 +46,4 @@ target_link_libraries (leechcraft_poshuku_cleanweb
+ install (TARGETS leechcraft_poshuku_cleanweb DESTINATION ${LC_PLUGINS_DEST})
+ install (FILES poshukucleanwebsettings.xml DESTINATION ${LC_SETTINGS_DEST})
+ 
+-FindQtLibs (leechcraft_poshuku_cleanweb Concurrent Widgets)
++FindQtLibs (leechcraft_poshuku_cleanweb Concurrent Widgets WebKitWidgets Xml)
+diff --git src/plugins/poshuku/plugins/dcac/CMakeLists.txt src/plugins/poshuku/plugins/dcac/CMakeLists.txt
+index 0b78e5d..20f0637 100644
+--- src/plugins/poshuku/plugins/dcac/CMakeLists.txt
++++ src/plugins/poshuku/plugins/dcac/CMakeLists.txt
+@@ -24,4 +24,4 @@ target_link_libraries (leechcraft_poshuku_dcac
+ install (TARGETS leechcraft_poshuku_dcac DESTINATION ${LC_PLUGINS_DEST})
+ install (FILES poshukudcacsettings.xml DESTINATION ${LC_SETTINGS_DEST})
+ 
+-FindQtLibs (leechcraft_poshuku_dcac Widgets)
++FindQtLibs (leechcraft_poshuku_dcac Widgets WebKitWidgets)
+diff --git src/plugins/poshuku/plugins/fatape/CMakeLists.txt src/plugins/poshuku/plugins/fatape/CMakeLists.txt
+index 084eabb..e6369e8 100644
+--- src/plugins/poshuku/plugins/fatape/CMakeLists.txt
++++ src/plugins/poshuku/plugins/fatape/CMakeLists.txt
+@@ -33,4 +33,4 @@ target_link_libraries (leechcraft_poshuku_fatape
+ install (TARGETS leechcraft_poshuku_fatape DESTINATION ${LC_PLUGINS_DEST})
+ install (FILES poshukufatapesettings.xml DESTINATION ${LC_SETTINGS_DEST})
+ 
+-FindQtLibs (leechcraft_poshuku_fatape Widgets)
++FindQtLibs (leechcraft_poshuku_fatape Widgets WebKitWidgets)
+diff --git src/plugins/poshuku/plugins/filescheme/CMakeLists.txt src/plugins/poshuku/plugins/filescheme/CMakeLists.txt
+index 8615b25..e70827c 100644
+--- src/plugins/poshuku/plugins/filescheme/CMakeLists.txt
++++ src/plugins/poshuku/plugins/filescheme/CMakeLists.txt
+@@ -21,4 +21,4 @@ target_link_libraries (leechcraft_poshuku_filescheme
+ 	)
+ install (TARGETS leechcraft_poshuku_filescheme DESTINATION ${LC_PLUGINS_DEST})
+ 
+-FindQtLibs (leechcraft_poshuku_filescheme Network)
++FindQtLibs (leechcraft_poshuku_filescheme Network Widgets)
+diff --git src/plugins/poshuku/plugins/onlinebookmarks/plugins/delicious/CMakeLists.txt src/plugins/poshuku/plugins/onlinebookmarks/plugins/delicious/CMakeLists.txt
+index 84973f2..4d16852 100644
+--- src/plugins/poshuku/plugins/onlinebookmarks/plugins/delicious/CMakeLists.txt
++++ src/plugins/poshuku/plugins/onlinebookmarks/plugins/delicious/CMakeLists.txt
+@@ -34,4 +34,4 @@ target_link_libraries (leechcraft_poshuku_onlinebookmarks_delicious
+ 
+ install (TARGETS leechcraft_poshuku_onlinebookmarks_delicious DESTINATION ${LC_PLUGINS_DEST})
+ 
+-FindQtLibs (leechcraft_poshuku_onlinebookmarks_delicious Widgets)
++FindQtLibs (leechcraft_poshuku_onlinebookmarks_delicious Widgets Network)
+diff --git src/plugins/poshuku/plugins/onlinebookmarks/plugins/readitlater/CMakeLists.txt src/plugins/poshuku/plugins/onlinebookmarks/plugins/readitlater/CMakeLists.txt
+index 3267543..7eef6fd 100644
+--- src/plugins/poshuku/plugins/onlinebookmarks/plugins/readitlater/CMakeLists.txt
++++ src/plugins/poshuku/plugins/onlinebookmarks/plugins/readitlater/CMakeLists.txt
+@@ -41,4 +41,4 @@ target_link_libraries (leechcraft_poshuku_onlinebookmarks_readitlater
+ 
+ install (TARGETS leechcraft_poshuku_onlinebookmarks_readitlater DESTINATION ${LC_PLUGINS_DEST})
+ 
+-FindQtLibs (leechcraft_poshuku_onlinebookmarks_readitlater Widgets)
++FindQtLibs (leechcraft_poshuku_onlinebookmarks_readitlater Widgets Network)
+diff --git src/plugins/poshuku/plugins/qrd/CMakeLists.txt src/plugins/poshuku/plugins/qrd/CMakeLists.txt
+index 99fffe2..2bff36b 100644
+--- src/plugins/poshuku/plugins/qrd/CMakeLists.txt
++++ src/plugins/poshuku/plugins/qrd/CMakeLists.txt
+@@ -27,4 +27,4 @@ target_link_libraries (leechcraft_poshuku_qrd
+ install (TARGETS leechcraft_poshuku_qrd DESTINATION ${LC_PLUGINS_DEST})
+ #install (FILES poshukuqrdsettings.xml DESTINATION ${LC_SETTINGS_DEST})
+ 
+-FindQtLibs (leechcraft_poshuku_qrd Core)
++FindQtLibs (leechcraft_poshuku_qrd Core WebKitWidgets)
+diff --git src/plugins/poshuku/plugins/speeddial/CMakeLists.txt src/plugins/poshuku/plugins/speeddial/CMakeLists.txt
+index 0d4c888..249f88c 100644
+--- src/plugins/poshuku/plugins/speeddial/CMakeLists.txt
++++ src/plugins/poshuku/plugins/speeddial/CMakeLists.txt
+@@ -25,4 +25,4 @@ target_link_libraries (leechcraft_poshuku_speeddial
+ install (TARGETS leechcraft_poshuku_speeddial DESTINATION ${LC_PLUGINS_DEST})
+ install (FILES poshukuspeeddialsettings.xml DESTINATION ${LC_SETTINGS_DEST})
+ 
+-FindQtLibs (leechcraft_poshuku_speeddial Concurrent)
++FindQtLibs (leechcraft_poshuku_speeddial Concurrent Widgets WebKitWidgets)
