@@ -1,5 +1,5 @@
 %define product_name leechcraft
-%define plugin_dir %{_libdir}/%{product_name}/plugins
+%define plugin_dir %{_libdir}/%{product_name}/plugins-qt5
 %define translations_dir %{_datadir}/%{product_name}/translations
 %define settings_dir %{_datadir}/%{product_name}/settings
 %define full_version %{version}-%{release}
@@ -9,7 +9,7 @@
 Name:           leechcraft-poshuku
 Summary:        LeechCraft Web Browser Module
 Version:        0.6.75
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv2+
 Url:            http://leechcraft.org
 Source0:        http://dist.leechcraft.org/LeechCraft/%{version}/leechcraft-0.6.70-%{git_version}.tar.xz
@@ -125,7 +125,7 @@ cat *.lang > poshuku.lang
 %{_includedir}/%{product_name}/*
 
 %changelog
-* Fri May 29 2015 Minh Ngo <minh@fedoraproject.org> - 0.6.75-1
+* Fri May 29 2015 Minh Ngo <minh@fedoraproject.org> - 0.6.75-2
 - 0.6.75-1
 
 * Sat Dec 27 2014 Minh Ngo <minh@fedoraproject.org> - 0.6.70-2
